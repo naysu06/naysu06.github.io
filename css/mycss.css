@@ -1,0 +1,10 @@
+body {
+  margin: 0px;
+  background-color: blue;
+}
+
+.navHeader {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+}
