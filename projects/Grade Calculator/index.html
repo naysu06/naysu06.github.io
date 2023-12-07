@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../Intro to JS/js/index.js"></script>
+    <link rel="stylesheet" href="../Intro to JS/cs/mycss.css" />
+    <title>GRADE CALCULATOR</title>
+  </head>
+  <body>
+    <div class="header-wrap">
+      <h1 style="font-family: 'Courier New', Courier, monospace">
+        Grade Calculator
+      </h1>
+    </div>
+    <div class="form-container">
+      <div class="grade-wrap">
+        <input type="number" id="intGrade1" placeholder="1st Grade" />
+        <input type="number" id="intGrade2" placeholder="2nd Grade" />
+        <input type="number" id="intGrade3" placeholder="3rd Grade" />
+        <input type="number" id="intGrade4" placeholder="4th Grade" />
+        <input type="number" id="intGrade5" placeholder="5th Grade" />
+        <div class="btn-wrap">
+          <button id="btnSubmit" onclick="calculateAverage()">Submit</button>
+        </div>
+      </div>
+      <div class="info-wrap">
+        <input type="text" id="txtName" placeholder="Name" />
+        <input type="text" id="txtSection" placeholder="Section" />
+        <input type="text" id="txtYearlvl" placeholder="Year Level" />
+      </div>
+    </div>
+    <div
+      id="outputDiv"
+      style="font-family: 'Courier New', Courier, monospace; font-weight: bold"
+    ></div>
+  </body>
+</html>

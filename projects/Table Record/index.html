@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery Activity</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <style>
+      body {
+        margin-top: 10px;
+      }
+      input {
+        margin: 5px;
+      }
+
+      td {
+        text-align: center;
+      }
+
+      #btnSubmit {
+        align-items: center;
+        background-color: #0a66c2;
+        border: 0;
+        border-radius: 10px;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+          "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans",
+          Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 20px;
+        max-width: 480px;
+        min-height: 40px;
+        min-width: 0px;
+        overflow: hidden;
+        padding: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        touch-action: manipulation;
+        transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+          box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+          color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+        user-select: none;
+        -webkit-user-select: none;
+        vertical-align: middle;
+      }
+    </style>
+    <div
+      id="table-wrap"
+      style="
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+        width: 50%;
+        margin: auto;
+      "
+    >
+      <div id="user-col" style="border: solid; padding: 10px">
+        <div class="user-title"><strong>Enter a record</strong></div>
+        <form id="userForm">
+          <label for="userName"><strong>Name:</strong></label
+          ><br />
+          <input type="text" id="userName" autocomplete="off" required /><br />
+          <label for="userCourse"><strong>Course:</strong></label
+          ><br />
+          <input
+            type="text"
+            id="userCourse"
+            autocomplete="off"
+            required
+          /><br />
+          <label for="userSection"><strong>Section:</strong></label
+          ><br />
+          <input
+            type="text"
+            id="userSection"
+            autocomplete="off"
+            required
+          /><br />
+          <div
+            class="btn-wrap"
+            style="
+              position: relative;
+              left: 70px;
+              background-color: rgb(from color r g b);
+            "
+          >
+            <button id="btnSubmit" class="recordBtn btn-primary">
+              Save Record
+            </button>
+          </div>
+        </form>
+      </div>
+      <div id="result-col" style="border: solid; padding: 10px">
+        <table class="table">
+          <div class="table-title" style="text-align: center">
+            <strong>Records</strong>
+          </div>
+          <thead>
+            <tr>
+              <th scope="col"><strong>Name</strong></th>
+              <th scope="col"><strong>Course</strong></th>
+              <th scope="col"><strong>Section</strong></th>
+              <th scope="col"><strong>Actions</strong></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("#btnSubmit").click(function () {
+          var Name = $("#userName").val();
+          var Course = $("#userCourse").val();
+          var Section = $("#userSection").val();
+          var Inputs = Name && Course && Section;
+
+          if (Inputs == "") {
+            console.log("Error");
+          } else {
+            $("tbody").append(
+              "<tr><td>" +
+                Name +
+                "</td>" +
+                "<td>" +
+                Course +
+                "</td>" +
+                "<td>" +
+                Section +
+                "</td>" +
+                '<td><button class="btn btn-danger delete-btn">Delete</button></td></tr>'
+            );
+            $("#userForm")[0].reset();
+          }
+        });
+
+        $("tbody").on("click", ".delete-btn", function () {
+          $(this).closest("tr").remove();
+        });
+      });
+    </script>
+  </body>
+</html>
