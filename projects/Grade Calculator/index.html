@@ -3,15 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="../Intro to JS/js/index.js"></script>
-    <link rel="stylesheet" href="../Intro to JS/cs/mycss.css" />
+    <script src="../Grade Calculator/js/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/projects/Grade Calculator/cs/mycss.css" />
     <title>GRADE CALCULATOR</title>
   </head>
   <body>
     <div class="header-wrap">
-      <h1 style="font-family: 'Courier New', Courier, monospace">
-        Grade Calculator
-      </h1>
+      <div class="dropdown" style="display: inline-block">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+      <div
+        class="header-title"
+        style="display: inline-block; text-align: center"
+      >
+        <h1
+          style="
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 0px;
+          "
+        >
+          Grade Calculator
+        </h1>
+      </div>
     </div>
     <div class="form-container">
       <div class="grade-wrap">
