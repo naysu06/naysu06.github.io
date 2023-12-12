@@ -11,6 +11,11 @@ a {
   text-decoration: none;
 }
 
+h1,
+p{
+  color: white;
+}
+
 svg {
   padding: 2px;
 }
@@ -35,6 +40,10 @@ svg {
   backdrop-filter: blur(4.5px);
   -webkit-backdrop-filter: blur(4.5px);
   border-radius: 10px;
+}
+
+.user-about-wrap {
+  padding: 15px;
 }
 
 .user-img {
