@@ -1,14 +1,13 @@
 body {
-  margin: 0;
-  height: 700px;
+  margin: 0px;
+  height: auto;
 }
 
 ul {
-  margin: 0;
+  margin-top: 35px;
   color: black;
   display: inline-block;
   text-decoration: none;
-  line-height: 80px;
 }
 
 h1,
@@ -38,7 +37,7 @@ a {
 
 .sign-in-bar {
   position: absolute;
-  left: 1104px;
+  left: 1370px;
   top: -3px;
   width: auto;
   height: auto;
